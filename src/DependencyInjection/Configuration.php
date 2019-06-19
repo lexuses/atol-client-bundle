@@ -22,7 +22,7 @@ final class Configuration implements ConfigurationInterface
             ->children()
                 ->arrayNode('clients')
                     ->useAttributeAsKey('name')
-                    ->arrayPrototype()
+                    ->prototype('array')
                         ->beforeNormalization()
                             ->ifTrue(function ($v) {
                                 return isset($v['version'])
@@ -46,7 +46,7 @@ final class Configuration implements ConfigurationInterface
                             ->end()
                             ->arrayNode('guzzle_client_options')
                                 ->info('Configuration options for guzzle client')
-                                ->scalarPrototype()->end()
+                                ->prototype('scalar')->end()
                             ->end()
                             ->scalarNode('base_url')
                                 ->info('Base url of ATOL service')

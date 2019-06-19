@@ -1,7 +1,5 @@
 <?php
 
-namespace Lamoda\AtolClientBundle\Tests\App;
-
 use JMS\SerializerBundle\JMSSerializerBundle;
 use Lamoda\AtolClientBundle\AtolClientBundle;
 use Symfony\Bundle\FrameworkBundle\FrameworkBundle;

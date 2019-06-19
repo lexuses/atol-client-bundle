@@ -10,14 +10,20 @@
         }
     ],
     "minimum-stability": "stable",
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/lexuses/atol-client"
+        }
+    ],
     "require": {
         "php": "^7.1",
-        "lamoda/atol-client": "^1.0",
-        "symfony/dependency-injection": "^3.4 || ^4.0",
-        "symfony/http-kernel": "^3.4 || ^4.0",
-        "symfony/config": "^3.4 || ^4.0",
-        "symfony/yaml": "^3.4 || ^4.0",
-        "jms/serializer-bundle": "^2.3",
+        "lamoda/atol-client": "dev-feature/symfony2.8",
+        "symfony/dependency-injection": "~2.8 || ^3.4 || ^4.0",
+        "symfony/http-kernel": "~2.8 || ^3.4 || ^4.0",
+        "symfony/config": "~2.8 || ^3.4 || ^4.0",
+        "symfony/yaml": "~2.8 || ^3.4 || ^4.0",
+        "jms/serializer-bundle": "^1.4",
         "guzzlehttp/guzzle": "^6.0"
     },
     "require-dev": {
@@ -33,7 +39,8 @@
     "autoload-dev": {
         "psr-4": {
             "Lamoda\\AtolClientBundle\\Tests\\": "tests/"
-        }
+        },
+        "files": [ "tests/App/Kernel.php" ]
     },
     "config": {
         "platform": {

@@ -1,7 +1,4 @@
 services:
-  _defaults:
-    public: false
-
   # JMS (de)serialze format: "atol_client".
   # $someValue <-> '"some_value"'.
   atol_client.serializer.visitor.deserialize.atol_client:

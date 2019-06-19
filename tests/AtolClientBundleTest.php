@@ -13,13 +13,14 @@ final class AtolClientBundleTest extends WebTestCase
      */
     public function testAtolApiService(string $env, array $existedServices): void
     {
-        $kernel = $this->bootKernel([
+        self::bootKernel([
             'environment' => $env,
         ]);
+        $container = self::$kernel->getContainer();
 
         foreach ($existedServices as $name => $class) {
-            $this->assertTrue($kernel->getContainer()->has($name));
-            $service = $kernel->getContainer()->get($name);
+            $this->assertTrue($container->has($name));
+            $service = $container->get($name);
             $this->assertInstanceOf($class, $service);
         }
     }

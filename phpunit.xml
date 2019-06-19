@@ -13,7 +13,8 @@
 
         <env name="APP_ENV" value="test" />
         <env name="APP_DEBUG" value="1" />
-        <env name="KERNEL_CLASS" value="Lamoda\AtolClientBundle\Tests\App\Kernel" />
+        <env name="KERNEL_CLASS" value="Kernel" />
+        <server name="KERNEL_DIR" value="tests/App" />
     </php>
 
     <testsuites>

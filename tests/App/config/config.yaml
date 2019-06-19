@@ -8,9 +8,6 @@ framework:
         enable_annotations: true
 
 services:
-    _defaults:
-        public: true
-
     app.guzzle.mock_handler:
         class: \GuzzleHttp\Handler\MockHandler
 
